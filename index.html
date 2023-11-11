@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploration and Exposition</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="tableau">
+      <div
+        class="tableauPlaceholder"
+        id="viz1697315255142"
+        style="position: relative"
+      >
+        <noscript
+          ><a href="#"
+            ><img
+              alt="Effect of Race on Household Device Perception&#47;Use "
+              src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;57&#47;57JWBT77X&#47;1_rss.png"
+              style="border: none" /></a></noscript
+        ><object class="tableauViz" style="display: none">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="path" value="shared&#47;57JWBT77X" />
+          <param name="toolbar" value="yes" />
+          <param
+            name="static_image"
+            value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;57&#47;57JWBT77X&#47;1.png"
+          />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+          <param name="language" value="en-US" />
+          <param name="filter" value="publish=yes" />
+        </object>
+      </div>
+      <script type="text/javascript">
+        var divElement = document.getElementById("viz1697315255142");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        vizElement.style.width = "1016px";
+        vizElement.style.height = "991px";
+        var scriptElement = document.createElement("script");
+        scriptElement.src =
+          "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </section>
+    <section class="introduction">
+      <h1>Introduction</h1>
+      <p>
+        Note: I ran into an error when embedding the Tableau story, so
+        <strong>please scroll all the way to the left</strong> to make sure that you are viewing
+        from the intended first tab. I apologize for the inconvenience, I tried
+        reimporting the story and changing how the story was imported but
+        nothing worked.
+      </p>
+      <p>
+        For the Exploration and Exposition with Tableau project, I chose to
+        explore the EdConnect 2023 Household Survey Results dataset. This
+        dataset contained a plethora of information, but something that I wanted
+        to explore further was the effect of a child’s race on a household’s
+        perception on digital devices. My hypothesis prior to delving deeper
+        into the data was that there would be an effect because of inherent
+        cultural differences between all-white families and families of color.
+        This is based upon my experience as a person of color as well as
+        conversations with friends who come from both sides of the categories —
+        all white or families of color. I created a set of 7 questions under 3
+        topics to organize the datasets: one introductory question to describe
+        the 2 categories of households, 2 questions under the topic of Digital
+        Device Usage Patterns and Learning, 2 questions under the topic of
+        Parent-School Interaction through Digital Devices and 2 questions under
+        the topic of Household Digital Device Perception. These questions served
+        as a guiding point in creating the visualizations necessary for this
+        project.
+      </p>
+    </section>
+    <section class="analysis-part-1">
+      <h2>Organization of Data and an Important Note</h2>
+      <p>
+        From original table, I used Tableau to move the questions from the
+        columns label to rows and exported/saved the data to an Excel sheet. I
+        reimported this sheet into Tableau as an updated data source. From
+        there, I linked the updated sheet with labels: one for labels for
+        answers and the other for labels for questions, as the labels.csv file
+        that was given combined the answers and questions together. Using
+        Tableau’s relationship line and filter functions, I was able to obtain
+        the result to create my preliminary sheets for data concerning the total
+        household numbers. For the specific BIPOC versus All-White
+        categorizations, I used Excel pivot tables to calculate the numbers for
+        each question/question option. Based on the data from the pivot tables,
+        I created another Excel sheet and manually inputted the pivot data in
+        order to achieve a data source to import into Tableau that could
+        ultimately be used to create my final graphs comparing the BIPOC and
+        All-White category data.
+      </p>
+      <p>
+        However, in the process of creating pivot tables, I noticed that my
+        numbers did not 100% match the reference graphs that were made available
+        on the
+        <a href="https://edconnect.bc.edu/#/dashboard/household" target="_blank"
+          >EdConnect Household Survey dashboard</a
+        >, particularly the BIPOC vs All-White numbers — what I was interested
+        in. My numbers were slightly off, so I dug into the original CSV file
+        provided by Professor Kim and noticed that some of the IDs had an empty
+        value for the BIPOC category. An example of this was ID 596, which had a
+        value for every category except the BIPOC column. Due to the fact that
+        the BIPOC categorization was based on a “True/False” system, in which
+        the only 2 possible results could have been BIPOC or All-White, it was
+        quite confusing as to why there were some empty values. It seems as if
+        the
+        <a href="https://edconnect.bc.edu/#/dashboard/household" target="_blank"
+          >EdConnect dashboard</a
+        >
+        counted these empty values into the “All White” category, resulting in
+        numbers different from mine. However, I wanted my charts to accurately
+        reflect the dataset that was given to me, so I decided to keep my data
+        different from the given dashboard.
+      </p>
+    </section>
+    <section class="analysis-part-2">
+      <h2>Reflection</h2>
+      <p>
+        I used a combination of 4 different types of visualizations to create my
+        story. First, I used a pie chart to represent the 2 different types of
+        households being analyzed: an All-White household and a household with
+        at least 1 BIPOC child. I chose a pie graph because of its simplicity as
+        it makes very clear to a viewer the exact numbers and percentages of
+        each category being analyzed. For the visualization concerning the
+        household totals regarding the topics of Digital Device Usage Patterns
+        and Household Digital Device Perception, I used a normal bar chart. The
+        bar chart was a clear choice for these visualizations because it allows
+        for viewers to clearly see the choices and their respective numbers for
+        each question asked in part 1 of the survey. To display the total
+        household figures for the topic of Parent-School Interaction through
+        Digital Devices, I chose to use a highlight table because of its
+        effectiveness in conveying a message of a strong trends using colors.
+        It’s very clear at first glance that households sway significantly
+        towards the side of using digital devices several times to access school
+        information just purely by looking at the colors before the numbers.
+        Lastly, I used stack bar charts for all of the comparisons between BIPOC
+        and All-White households because it was the best way to have a viewer
+        understand the ratios of each survey response between the two groups. By
+        stacking the bar chart, viewers can clearly see whether or not there is
+        a significant difference in number/percentage between BIPOC and
+        All-White households in the selection choices in each of the survey
+        questions. I also added annotations to further assist viewers in
+        immediately understanding the percentages for each bar graph and what
+        they represented.
+      </p>
+      <p>
+        In testing my original hypothesis, I looked at the data assuming that if
+        race has a no effect or a minimal effect on household, the data should
+        follow the same pattern as displayed in the pie chart; for each choice
+        in the survey, there should be about a 64/36 percent split between BIPOC
+        and All-White households since that’s the same ratio as the total number
+        of BIPOC/All-White households. It became quickly clear that there seemed
+        to be a trend that BIPOC families tended to stray away from technology,
+        as there was a greater percentage of BIPOC families voting “Never,”
+        “Strongly disagree,” or “Disagree” than the percentage that they made of
+        the total household number. For example, this can be seen in the final
+        visualization, concerning whether or not households saw that technology
+        would be important in the future, where BIPOC households made up 80% of
+        the “strongly disagree” category and 88% of the “somewhat disagree.”
+        However, it is very important to note that although these numbers may
+        show some correlation, there are definitely a lot more factors to
+        consider in addition to race. The survey included other household
+        characteristics such as the genders of the child(ren) in the household,
+        whether or not the household qualified for financial aid in school
+        purchases, and many others. All of these other factors definitely impact
+        a household’s perception and usage of digital devices and technology,
+        but my visualization project was purely meant to serve as a guideline to
+        understanding how race also plays a role in these household perceptions.
+      </p>
+    </section>
+  </body>
+</html>
